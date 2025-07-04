@@ -19,7 +19,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build Docker image
-        run: docker build -t azizchamekh/shoppingapp:latest .
+        run: docker build -t azizchamekh/shoppingapp:latest -f Shopping1/Shopping.Client/Dockerfile .
 
       - name: Push Docker image
         run: docker push azizchamekh/shoppingapp:latest
